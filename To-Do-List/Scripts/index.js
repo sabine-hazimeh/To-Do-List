@@ -1,44 +1,35 @@
 let addTaskBtn = document.getElementById("addTaskBtn");
 let taskInput = document.getElementById("taskInput");
 let taskList = document.querySelector(".list");
-
+let UserNameInput = document.getElementById("usernameInput");
+let TimeInput = document.getElementById("timeInput");
 addTaskBtn.addEventListener("click", function () {
   let taskText = taskInput.value.trim();
-
-  if (taskText !== "") {
+  let nameText = UserNameInput.value.trim();
+  let timeText = TimeInput.value.trim();
+  if (taskText !== "" && nameText !== "" && timeText !== "") {
     let newTaskItem = document.createElement("li");
-    newTaskItem.textContent = taskText;
+    newTaskItem.innerHTML = ` ${taskText} <br> ${nameText} <span>|</span> ${timeText}`;
     taskList.appendChild(newTaskItem);
     taskInput.value = "";
-
+    UserNameInput.value = "";
+    TimeInput.value = "";
     newTaskItem.addEventListener("click", function () {
       newTaskItem.style.textDecoration = "line-through";
     });
   }
 });
 
-// Function to format the date and time
-function formatDateTime(date) {
+function formatDate(date) {
   const day = date.getDate();
-  const month = date.getMonth() + 1; // Month is zero-based
+  const month = date.getMonth() + 1;
   const year = date.getFullYear();
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
+  const formattedDate = `${month}/${day}/${year}`;
 
-  // Ensure minutes are two digits
-  const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-
-  // Format the date and time as required (MM/DD/YYYY HH:MM)
-  const formattedDateTime = `${month}/${day}/${year} - ${hours}:${formattedMinutes}`;
-
-  return formattedDateTime;
+  return formattedDate;
 }
 
-// Get the current date and time
-const currentDateTime = new Date();
+const currentDate = new Date();
+const formattedDate = formatDate(currentDate);
 
-// Format the date and time using the function
-const formattedDateTime = formatDateTime(currentDateTime);
-
-// Update the content of the <p> tag with the formatted date and time
-document.getElementById("currentDateTime").textContent = formattedDateTime;
+document.getElementById("currentDate").textContent = formattedDate;
