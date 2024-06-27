@@ -1,0 +1,104 @@
+* {
+  /* margin: 0; */
+  padding: 0;
+  /* border: 0; */
+}
+/* header{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    height: 100px;
+    color:#2F3645;
+    font-weight: bold;
+    background-color: #E6B9A6;
+}*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6b9a6;
+  font-family: sans-serif;
+  line-height: 30px;
+  height: 600px;
+}
+.main-container {
+  display: flex;
+  padding: 20px;
+  background-color: #eeedeb;
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 80%;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 20%;
+  padding-right: 30px;
+  border-right: 2px solid #e6b9a6;
+}
+.task {
+    background-color: #dcdcdc;
+    border-radius: 5px;
+    padding: 10px;
+    
+  }
+.task-list {
+  width: 300px; /* Adjust as needed */
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the space between tasks */
+}
+.container2 {
+    display: flex;
+    flex-direction:column;
+    width: 80%;
+}
+
+#taskInput {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the shadow values as needed */
+}
+.containerHeader{
+    display: flex;
+    flex-direction: column;
+}
+.headerclass{
+    justify-content: flex-start;
+    margin-left: 10px;
+   
+}
+.inputSection{
+    display: flex;
+    gap: 15px;
+   justify-content: flex-end;
+   padding: 10px;
+}
+#addTaskBtn{
+    padding:15px;
+    background-color: #e6b9a6;
+    border:none;
+    color:#2F3645;
+    border-radius: 10px;
+}
+.listContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+li{
+    list-style-type: none;
+    border-bottom: 1px solid #e6b9a6;
+    margin-bottom: 10px;
+}

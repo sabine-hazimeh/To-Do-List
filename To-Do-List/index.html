@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/index.css" />
+  </head>
+
+  <body>
+    <section class="main-container">
+      <section class="container1">
+        <h1>Task Planner</h1>
+        <p>
+            <b>TRANSFORM YOUR PRODUCTIVITY WITH OUR TASK PLANNER,<br>
+                ACHIEVE GOALS, AND MAKE EVERY DAY COUNT!</b>
+        </p>
+        <p id="currentDateTime"></p>
+      </section>
+      <section class="container2">
+        <section class="containerHeader">
+          <h1 class="headerclass">Today's Achievements</h1>
+          <section class="inputSection">
+            <input type="text" id="taskInput" placeholder="Enter Tasks" />
+            <button id="addTaskBtn">Add Task</button>
+          </section>
+        </section>
+        <section class="listContainer">
+          <div class="task-list">
+            <div class="task">
+              <ul class="list"></ul>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <script src="Scripts/index.js"></script>
+  </body>
+</html>
